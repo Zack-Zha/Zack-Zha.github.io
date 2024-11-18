@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cn" class="scroll-smooth">
+<html lang="cn" class="scroll-smooth font-sans">
 
 <head>
   <meta charset="UTF-8">
@@ -8,15 +8,15 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-white">
+<body class="bg-white ">
   <!-- Navbar -->
   <nav class="flex justify-between absolute top-0 left-0 w-full px-16 py-10">
     <div class="flex justify-normal w-1/3 space-x-8">
       <a href="#works"
-        class="flex justify-center w-36 h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0"><button>✏️
-          WORK</button></a>
+        class="flex justify-center w-[144px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>✏️
+          WORKS</button></a>
       <a href="#projects"
-        class="flex justify-center w-40 h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0"><button>🖼
+        class="flex justify-center w-[178px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>🖼
           GALLERY</button></a>
     </div>
     <div class="flex justify-center w-1/3 h-auto">
@@ -48,14 +48,14 @@
     <img src="media/homepage_bg.jpg" alt="Background Image" class="w-full h-auto mb-[-176px]">
     <div class="flex justify-center space-x-[72px] bg-white/0">
       <a href="#works">
-      <button
-        class="group flex items-center justify-center w-[340px] h-[96px] rounded-full border border-black/20 hover:bg-black hover:text-white hover:border-0 relative">
-        <p class="text-[32px] absolute left-[36.5px]">Explore More</p>
-        <img src="media/arrow_03.png" alt="Arrow"
-          class="absolute right-[36.5px] transition-opacity duration-300 group-hover:opacity-0">
-        <img src="media/arrow_04.png" alt="Arrow"
-          class="absolute right-[36.5px] hidden group-hover:block transition-opacity duration-300">
-      </button>
+        <button
+          class="group flex items-center justify-center w-[340px] h-[96px] rounded-full border border-black/20 hover:bg-black hover:text-white hover:border-0 relative">
+          <p class="text-[32px] absolute left-[36px]">Explore More</p>
+          <img src="media/arrow_03.png"
+            class="absolute right-[36px] transition-opacity duration-300 group-hover:opacity-0">
+          <img src="media/arrow_04.png"
+            class="absolute right-[36px] hidden group-hover:block transition-opacity duration-300">
+        </button>
       </a>
       <button class="flex items-center justify-center w-[340px] h-[96px] rounded-full resume-button">
         <p class="text-[32px] text-white">My Resume</p>
@@ -66,34 +66,38 @@
   <!-- Works Section -->
   <section id="works" class="pt-[80px] flex bg-[#F1F4F7]">
     <!-- byme -->
-    <div class="w-1/2 h-auto bg-[#F1F4F7] p-[12px] relative">
-      <img class="rounded-[48px]" src="media/cover_byme.png">
+    <div class="w-1/2 h-auto bg-[#F1F4F7] pt-[12px] pb-[6px] pl-[12px] pr-[6px] relative">
+      <a href="byme.html">
+      <img class="rounded-[48px] hover:brightness-110 ease-in-out duration-300" src="media/cover_byme.png">
+      </a>
       <div class="absolute top-[52px] left-[52px] text-[28px] flex justify-normal space-x-[8px]">
         <img src="media/logo_byme.png">
-        <p>Byme</p>
+        <p class="font-semibold">Byme</p>
       </div>
       <p class="absolute top-[104px] left-[52px] text-[18px] text-black/60">心动来电，陌生社交新体验。</p>
       <div class="group">
-        <img class="absolute top-[12px] right-[12px]" src="media/corner.png">
+        <img class="absolute top-[12px] right-[6px]" src="media/corner.png">
         <a href="byme.html">
-          <img class="absolute top-[12px] right-[12px] transition-opacity duration-300 group-hover:opacity-0"
+          <img class="absolute top-[12px] right-[6px] transition-opacity duration-300 group-hover:opacity-0"
             src="media/arrow_02.png">
-          <img class="absolute top-[12px] right-[12px] hidden group-hover:block transition-opacity duration-300"
+          <img class="absolute top-[12px] right-[6px] hidden group-hover:block transition-opacity duration-300"
             src="media/arrow_02_hover.png">
         </a>
       </div>
     </div>
     <!-- qume -->
-    <div class="w-1/2 h-auto bg-[#F1F4F7] p-[12px] relative">
-      <img class="rounded-[48px]" src="media/cover_qume.png">
+    <div class="w-1/2 h-auto bg-[#F1F4F7] pt-[12px] pb-[6px] pr-[12px] pl-[6px] relative">
+      <a href="qume.html">
+      <img class="rounded-[48px] hover:brightness-125 ease-in-out duration-300" src="media/cover_qume.png">
+      </a>
       <div class="absolute top-[52px] left-[52px] text-[28px] flex justify-normal space-x-[8px]">
         <img src="media/logo_qume.png">
-        <p class="text-white">Byme</p>
+        <p class="text-white font-semibold">Qume</p>
       </div>
       <p class="absolute top-[104px] left-[52px] text-[18px] text-white">Cue U & Me.</p>
       <div class="group">
         <img class="absolute top-[12px] right-[12px]" src="media/corner.png">
-        <a href="byme.html">
+        <a href="qume.html">
           <img class="absolute top-[12px] right-[12px] transition-opacity duration-300 group-hover:opacity-0"
             src="media/arrow_02.png">
           <img class="absolute top-[12px] right-[12px] hidden group-hover:block transition-opacity duration-300"
@@ -102,75 +106,102 @@
       </div>
     </div>
   </section>
-  <section id="works" class="flex bg-black">
+  <section class="flex bg-[#F1F4F7]">
     <!-- gafalib -->
-    <div class="w-1/2 h-auto bg-[#F1F4F7] p-[12px] relative">
-      <img class="rounded-[48px]" src="media/cover_gafalib.png">
+    <div class="w-1/2 h-auto bg-[#F1F4F7] pt-[6px] pb-[6px] pl-[12px] pr-[6px] relative">
+      <a href="gafalib.html">
+      <img class="rounded-[48px] hover:brightness-125 ease-in-out duration-300" src="media/cover_gafalib.png">
+      </a>
       <div class="absolute top-[52px] left-[52px] text-[28px] flex justify-normal space-x-[8px]">
         <img src="media/logo_gafa.png">
-        <p class="text-white">GAFALib</p>
+        <p class="text-white font-semibold">GAFALib</p>
       </div>
       <p class="absolute top-[104px] left-[52px] text-[18px] text-white">全新系统，崭新风貌。</p>
       <div class="group">
-        <img class="absolute top-[12px] right-[12px]" src="media/corner.png">
-        <a href="byme.html">
-          <img class="absolute top-[12px] right-[12px] transition-opacity duration-300 group-hover:opacity-0"
+        <img class="absolute top-[6px] right-[6px]" src="media/corner.png">
+        <a href="gafalib.html">
+          <img class="absolute top-[6px] right-[6px] transition-opacity duration-300 group-hover:opacity-0"
             src="media/arrow_02.png">
-          <img class="absolute top-[12px] right-[12px] hidden group-hover:block transition-opacity duration-300"
+          <img class="absolute top-[6px] right-[6px] hidden group-hover:block transition-opacity duration-300"
             src="media/arrow_02_hover.png">
         </a>
       </div>
     </div>
     <!-- Timespon -->
-    <div class="w-1/2 h-auto bg-[#F1F4F7] p-[12px] relative">
-      <img class="rounded-[48px]" src="media/cover_timespon.png">
+    <div class="w-1/2 h-auto bg-[#F1F4F7] pt-[6px] pb-[6px] pr-[12px] pl-[6px] relative">
+      <a href="timespon.html">
+      <img class="rounded-[48px] hover:brightness-110 ease-in-out duration-300" src="media/cover_timespon.png">
+      </a>
       <div class="absolute top-[52px] left-[52px] text-[28px] flex justify-normal space-x-[8px]">
         <img src="media/logo_time.png">
-        <p>Timespon</p>
+        <p class="font-semibold">Timespon</p>
       </div>
       <p class="absolute top-[104px] left-[52px] text-[18px] text-black/60">时间就像海绵里的水。</p>
       <div class="group">
-        <img class="absolute top-[12px] right-[12px]" src="media/corner.png">
-        <a href="byme.html">
-          <img class="absolute top-[12px] right-[12px] transition-opacity duration-300 group-hover:opacity-0"
+        <img class="absolute top-[6px] right-[12px]" src="media/corner.png">
+        <a href="timespon.html">
+          <img class="absolute top-[6px] right-[12px] transition-opacity duration-300 group-hover:opacity-0"
             src="media/arrow_02.png">
-          <img class="absolute top-[12px] right-[12px] hidden group-hover:block transition-opacity duration-300"
+          <img class="absolute top-[6px] right-[12px] hidden group-hover:block transition-opacity duration-300"
+            src="media/arrow_02_hover.png">
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="flex bg-[#F1F4F7]">
+    <!-- Midea -->
+    <div class="w-1/2 h-auto bg-[#F1F4F7] pt-[6px] pb-[40px] pl-[12px] pr-[6px] relative">
+      <a href="super.html">
+      <img class="rounded-[48px] hover:brightness-110 ease-in-out duration-300" src="media/cover_super.png">
+      </a>
+      <div class="absolute top-[52px] left-[52px] text-[28px] flex justify-normal space-x-[8px]">
+        <img src="media/logo_midea.png">
+        <p class="text-black font-semibold">SUPER UX Model</p>
+      </div>
+      <p class="absolute top-[104px] left-[52px] text-[18px] text-black/60">美的IoT产品-用户体验度量模型</p>
+      <div class="group">
+        <img class="absolute top-[6px] right-[6px]" src="media/corner.png">
+        <a href="super.html">
+          <img class="absolute top-[6px] right-[6px] transition-opacity duration-300 group-hover:opacity-0"
+            src="media/arrow_02.png">
+          <img class="absolute top-[6px] right-[6px] hidden group-hover:block transition-opacity duration-300"
+            src="media/arrow_02_hover.png">
+        </a>
+      </div>
+    </div>
+    <!-- Timespon -->
+    <div class="w-1/2 h-auto bg-[#F1F4F7] pt-[6px] pb-[40px] pr-[12px] pl-[6px] relative">
+      <a href="timespon.html">
+      <img class="rounded-[48px] hover:brightness-125 ease-in-out duration-300" src="media/cover_gallery.png">
+      </a>
+      <div class="group">
+        <img class="absolute top-[6px] right-[12px]" src="media/corner.png">
+        <a href="timespon.html">
+          <img class="absolute top-[6px] right-[12px] transition-opacity duration-300 group-hover:opacity-0"
+            src="media/arrow_02.png">
+          <img class="absolute top-[6px] right-[12px] hidden group-hover:block transition-opacity duration-300"
             src="media/arrow_02_hover.png">
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center">Contact Me</h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST"
-        class="mt-8 max-w-lg mx-auto bg-white shadow-lg rounded-lg p-6">
-        <div class="mb-4">
-          <label for="name" class="block text-gray-600">Your Name</label>
-          <input type="text" id="name" name="name"
-            class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-        <div class="mb-4">
-          <label for="email" class="block text-gray-600">Your Email</label>
-          <input type="email" id="email" name="email"
-            class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-        <div class="mb-4">
-          <label for="message" class="block text-gray-600">Your Message</label>
-          <textarea id="message" name="message" rows="4"
-            class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-        </div>
-        <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Send</button>
-      </form>
-    </div>
+  <!-- More -->
+  <section class="h-[144px] bg-[#F1F4F7] border-t border-b border-black/10 flex justify-center items-center">
+    <button
+      class="cursor-not-allowed flex justify-center items-center rounded-full border border-black/20 w-[240px] h-[64px] hover:bg-black/10">
+      <p class="text-[20px]">🧐Coming Soon...</p>
+    </button>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-6">
-    <div class="container mx-auto px-6 text-center">
-      <p>© 2024 [Your Name]. All Rights Reserved.</p>
+  <footer class="bg-[#F1F4F7] h-[108px] text-[20px]">
+    <div class="flex justify-between p-[40px] text-black/60">
+      <p>© 2024 Zack. All rights reserved.</p>
+      <a href="mailto:chengkezha@gmail.com"
+        class="hover:underline hover:text-black transition-all duration-300 ease-in-out">
+        chengkezha@gmail.com
+      </a>
     </div>
   </footer>
 
