@@ -10,7 +10,7 @@
 
 <body class="bg-white ">
   <!-- Navbar -->
-  <nav class="flex justify-between absolute top-0 left-0 w-full px-16 py-10">
+  <nav class="flex justify-between absolute top-0 left-0 w-full px-16 py-10 z-30">
     <div class="flex justify-normal w-1/3 space-x-8">
       <a href="#works"
         class="flex justify-center w-[144px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>✏️
@@ -45,11 +45,14 @@
 
   <!-- Hero Section -->
   <div class="flex flex-col">
-    <img src="media/homepage_bg.jpg" alt="Background Image" class="w-full h-auto mb-[-176px]">
+    <video autoplay loop muted playsinline class="w-full h-auto mb-[-176px] z-0">
+      <source src="media/homepage_bg.mp4" type="video/mp4">
+      您的浏览器不支持 HTML5 视频。
+    </video>
     <div class="flex justify-center space-x-[72px] bg-white/0">
       <a href="#works">
         <button
-          class="group flex items-center justify-center w-[340px] h-[96px] rounded-full border border-black/20 hover:bg-black hover:text-white hover:border-0 relative">
+          class="z-30 group flex items-center justify-center w-[340px] h-[96px] rounded-full border border-black/20 hover:bg-black hover:text-white hover:border-0 relative">
           <p class="text-[32px] absolute left-[36px]">Explore More</p>
           <img src="media/arrow_03.png"
             class="absolute right-[36px] transition-opacity duration-300 group-hover:opacity-0">
@@ -57,16 +60,16 @@
             class="absolute right-[36px] hidden group-hover:block transition-opacity duration-300">
         </button>
       </a>
-      <button class="flex items-center justify-center w-[340px] h-[96px] rounded-full resume-button">
+      <button class="flex items-center justify-center w-[340px] h-[96px] rounded-full resume-button z-30">
         <p class="text-[32px] text-white">My Resume</p>
       </button>
     </div>
   </div>
 
   <!-- Works Section -->
-  <section id="works" class="pt-[80px] flex bg-[#F1F4F7]">
+  <section id="works" class="pt-[80px] flex bg-[#F5FAFD]">
     <!-- byme -->
-    <div class="w-1/2 h-auto bg-[#F1F4F7] pt-[12px] pb-[6px] pl-[12px] pr-[6px] relative">
+    <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[12px] pb-[6px] pl-[12px] pr-[6px] relative">
       <a href="byme.html">
       <img class="rounded-[48px] hover:brightness-110 ease-in-out duration-300" src="media/cover_byme.png">
       </a>
@@ -86,7 +89,7 @@
       </div>
     </div>
     <!-- qume -->
-    <div class="w-1/2 h-auto bg-[#F1F4F7] pt-[12px] pb-[6px] pr-[12px] pl-[6px] relative">
+    <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[12px] pb-[6px] pr-[12px] pl-[6px] relative">
       <a href="qume.html">
       <img class="rounded-[48px] hover:brightness-125 ease-in-out duration-300" src="media/cover_qume.png">
       </a>
@@ -106,9 +109,9 @@
       </div>
     </div>
   </section>
-  <section class="flex bg-[#F1F4F7]">
+  <section class="flex bg-[#F5FAFD]">
     <!-- gafalib -->
-    <div class="w-1/2 h-auto bg-[#F1F4F7] pt-[6px] pb-[6px] pl-[12px] pr-[6px] relative">
+    <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[6px] pb-[6px] pl-[12px] pr-[6px] relative">
       <a href="gafalib.html">
       <img class="rounded-[48px] hover:brightness-125 ease-in-out duration-300" src="media/cover_gafalib.png">
       </a>
@@ -128,7 +131,7 @@
       </div>
     </div>
     <!-- Timespon -->
-    <div class="w-1/2 h-auto bg-[#F1F4F7] pt-[6px] pb-[6px] pr-[12px] pl-[6px] relative">
+    <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[6px] pb-[6px] pr-[12px] pl-[6px] relative">
       <a href="timespon.html">
       <img class="rounded-[48px] hover:brightness-110 ease-in-out duration-300" src="media/cover_timespon.png">
       </a>
@@ -148,9 +151,9 @@
       </div>
     </div>
   </section>
-  <section class="flex bg-[#F1F4F7]">
+  <section class="flex bg-[#F5FAFD]">
     <!-- Midea -->
-    <div class="w-1/2 h-auto bg-[#F1F4F7] pt-[6px] pb-[40px] pl-[12px] pr-[6px] relative">
+    <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[6px] pb-[40px] pl-[12px] pr-[6px] relative">
       <a href="super.html">
       <img class="rounded-[48px] hover:brightness-110 ease-in-out duration-300" src="media/cover_super.png">
       </a>
@@ -170,7 +173,7 @@
       </div>
     </div>
     <!-- Timespon -->
-    <div class="w-1/2 h-auto bg-[#F1F4F7] pt-[6px] pb-[40px] pr-[12px] pl-[6px] relative">
+    <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[6px] pb-[40px] pr-[12px] pl-[6px] relative">
       <a href="timespon.html">
       <img class="rounded-[48px] hover:brightness-125 ease-in-out duration-300" src="media/cover_gallery.png">
       </a>
@@ -187,7 +190,7 @@
   </section>
 
   <!-- More -->
-  <section class="h-[144px] bg-[#F1F4F7] border-t border-b border-black/10 flex justify-center items-center">
+  <section class="h-[144px] bg-[#F5FAFD] border-t border-b border-black/10 flex justify-center items-center">
     <button
       class="cursor-not-allowed flex justify-center items-center rounded-full border border-black/20 w-[240px] h-[64px] hover:bg-black/10">
       <p class="text-[20px]">🧐Coming Soon...</p>
@@ -195,7 +198,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#F1F4F7] h-[108px] text-[20px]">
+  <footer class="bg-[#F5FAFD] h-[108px] text-[20px]">
     <div class="flex justify-between p-[40px] text-black/60">
       <p>© 2024 Zack. All rights reserved.</p>
       <a href="mailto:chengkezha@gmail.com"
