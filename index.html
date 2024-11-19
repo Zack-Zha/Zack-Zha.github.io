@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
+  <link href="./output.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
@@ -84,7 +83,7 @@
   <div class="hidden-below-sm">
     <section id="works" class="flex bg-[#F5FAFD]">
       <!-- byme -->
-      <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[12px] pb-[6px] pl-[12px] pr-[6px] relative">
+      <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[12px] pb-[6px] pl-[12px] pr-[6px] relative hover:-translate-y-[8px] ease-in-out transition-all">
         <a href="byme.html">
           <img class="rounded-[48px] hover:brightness-110 ease-in-out duration-300" src="media/cover_byme.png">
         </a>
@@ -104,7 +103,7 @@
         </div>
       </div>
       <!-- qume -->
-      <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[12px] pb-[6px] pr-[12px] pl-[6px] relative">
+      <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[12px] pb-[6px] pr-[12px] pl-[6px] relative hover:-translate-y-[8px] ease-in-out transition-all">
         <a href="qume.html">
           <img class="rounded-[48px] hover:brightness-125 ease-in-out duration-300" src="media/cover_qume.png">
         </a>
@@ -126,7 +125,7 @@
     </section>
     <section class="flex bg-[#F5FAFD]">
       <!-- gafalib -->
-      <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[6px] pb-[6px] pl-[12px] pr-[6px] relative">
+      <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[6px] pb-[6px] pl-[12px] pr-[6px] relative hover:-translate-y-[8px] ease-in-out transition-all">
         <a href="gafalib.html">
           <img class="rounded-[48px] hover:brightness-125 ease-in-out duration-300" src="media/cover_gafalib.png">
         </a>
@@ -146,7 +145,7 @@
         </div>
       </div>
       <!-- Timespon -->
-      <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[6px] pb-[6px] pr-[12px] pl-[6px] relative">
+      <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[6px] pb-[6px] pr-[12px] pl-[6px] relative hover:-translate-y-[8px] ease-in-out transition-all">
         <a href="timespon.html">
           <img class="rounded-[48px] hover:brightness-110 ease-in-out duration-300" src="media/cover_timespon.png">
         </a>
@@ -168,7 +167,7 @@
     </section>
     <section class="flex bg-[#F5FAFD]">
       <!-- Midea -->
-      <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[6px] pb-[40px] pl-[12px] pr-[6px] relative">
+      <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[6px] pb-[40px] pl-[12px] pr-[6px] relative hover:-translate-y-[8px] ease-in-out transition-all">
         <a href="super.html">
           <img class="rounded-[48px] hover:brightness-110 ease-in-out duration-300" src="media/cover_super.png">
         </a>
@@ -188,7 +187,7 @@
         </div>
       </div>
       <!-- Timespon -->
-      <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[6px] pb-[40px] pr-[12px] pl-[6px] relative">
+      <div class="w-1/2 h-auto bg-[#F5FAFD] pt-[6px] pb-[40px] pr-[12px] pl-[6px] relative hover:-translate-y-[8px] ease-in-out transition-all">
         <a href="timespon.html">
           <img class="rounded-[48px] hover:brightness-125 ease-in-out duration-300" src="media/cover_gallery.png">
         </a>
@@ -219,12 +218,12 @@
 
   <!-- More -->
   <div class="hidden-below-sm">
-  <section class="h-[144px] bg-[#F5FAFD] border-t border-b border-black/10 flex justify-center items-center">
-    <button
-      class="cursor-not-allowed flex justify-center items-center rounded-full border border-black/20 w-[240px] h-[64px] hover:bg-black/10">
-      <p class="text-[20px]">🧐Coming Soon...</p>
-    </button>
-  </section>
+    <section class="mt-[2px] h-[144px] bg-[#F5FAFD] border-t border-b border-black/10 flex justify-center items-center">
+      <button
+        class="cursor-not-allowed flex justify-center items-center rounded-full border border-black/20 w-[240px] h-[64px] hover:bg-black/10">
+        <p class="text-[20px]">🧐Coming Soon...</p>
+      </button>
+    </section>
   </div>
   <div class="visible-below-lg">
     <section class="h-[96px] bg-[#F5FAFD] border-t border-b border-black/10 flex justify-center items-center">
@@ -233,7 +232,7 @@
         <p class="text-[14px]">🧐Coming Soon...</p>
       </button>
     </section>
-    </div>
+  </div>
 
   <!-- Footer -->
   <!-- web端Footer -->
@@ -246,6 +245,7 @@
           chengkezha@gmail.com
         </a>
       </div>
+    </footer>
   </div>
   <!-- 移动端Footer -->
   <div class="visible-below-lg">
@@ -257,8 +257,8 @@
           chengkezha@gmail.com
         </a>
       </div>
+    </footer>
   </div>
-  </footer>
 
 
   <!-- 灵动岛悬停动画 -->
@@ -329,9 +329,9 @@
   </script>
 
   <!-- css -->
-   <style>
-  /* 加载页面 */
-  #loading-screen {
+  <style>
+    /* 加载页面 */
+    #loading-screen {
       position: fixed;
       width: 100%;
       height: 100%;
@@ -340,45 +340,46 @@
       justify-content: center;
       align-items: center;
       z-index: 1000;
-  }
-  
-  .loader {
+    }
+
+    .loader {
       border: 8px solid #f3f3f3;
       border-radius: 50%;
       border-top: 8px solid #000000;
       width: 60px;
       height: 60px;
       animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
+    }
+
+    @keyframes spin {
       0% {
-          transform: rotate(0deg);
+        transform: rotate(0deg);
       }
-  
+
       100% {
-          transform: rotate(360deg);
+        transform: rotate(360deg);
       }
-  }
-  
-  /* 断点 */
-  
-  /* 默认隐藏 */
-  .hidden-below-sm {
+    }
+
+    /* 断点 */
+
+    /* 默认隐藏 */
+    .hidden-below-sm {
       display: none;
     }
+
     /* 仅当屏幕宽度大于等于1024px时显示 */
     @media (min-width: 1024px) {
       .hidden-below-sm {
         display: block;
       }
-    }  
-  
-  /* 默认隐藏 */
-  .visible-below-lg {
+    }
+
+    /* 默认隐藏 */
+    .visible-below-lg {
       display: none;
     }
-    
+
     /* 屏幕宽度小于1024px时显示 */
     @media (max-width: 1023px) {
       .visible-below-lg {
@@ -386,7 +387,17 @@
       }
     }
   </style>
-  
+<!--鼠标-->
+<!--
+<style>
+  body {
+  cursor: url('media/cursor.png'),auto;
+  a:hover {
+    cursor: url('media/cursor_hover.png'),auto;
+  }
+}
+</style>
+-->
 </body>
 
 </html>
