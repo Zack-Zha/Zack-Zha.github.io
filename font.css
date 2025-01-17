@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'PingFangSC';
+  src: url('font/pingfangsc-regular.otf') format('opentype');
+  font-weight: normal;
+  /* Regular weight */
+}
+
+@font-face {
+  font-family: 'PingFangSC';
+  src: url('font/pingfangsc-medium.otf') format('opentype');
+  font-weight: 500;
+  /* Medium weight */
+}
+
+@font-face {
+  font-family: 'PingFangSC';
+  src: url('font/pingfangsc-semibold.otf') format('opentype');
+  font-weight: 600;
+  /* Semibold weight */
+}
+
+body {
+  font-family: 'PingFangSC', sans-serif;
+  /* Use regular weight for the whole page */
+  font-weight: normal;
+  /* Regular weight for the entire page */
+}
+
+.PF-sm {
+  font-family: 'PingFangSC', sans-serif;
+  /* Use custom font */
+  font-weight: 600;
+  /* Set to semibold for this class */
+}
+
+.PF-r {
+  font-family: 'PingFangSC', sans-serif;
+  /* Use custom font */
+  font-weight: normal;
+  /* Set to semibold for this class */
+}
+
+.PF-m {
+  font-family: 'PingFangSC', sans-serif;
+  /* Use custom font */
+  font-weight: 500;
+  /* Set to semibold for this class */
+}
+
+
+/* 弹窗布局 */
+.modal {
+  display: none;
+  /* 默认隐藏 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  /* 背景置灰 */
+  justify-content: center;
+  align-items: flex-start;
+  /* 顶部对齐 */
+  z-index: 50;
+  /* 确保在最上层 */
+  overflow-y: auto;
+  /* 允许垂直滚动 */
+  padding-top: 64px;
+  /* 顶部留出400px间隙 */
+  padding-bottom: 128px;
+  /* 顶部留出400px间隙 */
+}
+
+.modal.active {
+  display: flex;
+  /* 显示模态框 */
+}
+
+img {
+  max-width: 80%;
+  /* 确保图片不溢出 */
+  height: auto;
+  /* 使图片按比例缩放 */
+  margin: 0 auto;
+  /* 图片居中 */
+}

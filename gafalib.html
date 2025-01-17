@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片弹出效果</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* 自定义样式 */
+        .modal {
+            display: none; /* 默认隐藏 */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7); /* 背景置灰 */
+            justify-content: center;
+            align-items: flex-start; /* 顶部对齐 */
+            z-index: 50; /* 确保在最上层 */
+            overflow-y: auto; /* 允许垂直滚动 */
+            padding-top: 64px; /* 顶部留出400px间隙 */
+            padding-bottom: 128px; /* 顶部留出400px间隙 */
+        }
+
+        .modal.active {
+            display: flex; /* 显示模态框 */
+        }
+
+        img {
+            max-width: 80%; /* 确保图片不溢出 */
+            height: auto; /* 使图片按比例缩放 */
+            margin: 0 auto; /* 图片居中 */
+        }
+
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-white to-black flex flex-col items-center justify-center h-screen">
+    <button data-image="media/Byme/01.png" class="openModal px-4 py-2 bg-blue-500 text-white rounded mb-4">图片 1</button>
+    <button data-image="media/Byme/02.png" class="openModal px-4 py-2 bg-blue-500 text-white rounded mb-4">图片 2</button>
+    <button data-image="https://via.placeholder.com/600x2000" class="openModal px-4 py-2 bg-blue-500 text-white rounded">图片 3</button>
+    
+    <div id="imageModal" class="modal">
+        <button id="closeModal" class="close-button"></button>
+        <img id="modalImage" src="" alt="长图">
+    </div>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModalButton = document.getElementById('closeModal');
+
+        // 通用打开模态框函数
+        function openModal(imageSrc) {
+            modalImage.src = imageSrc;
+            modal.classList.add('active');
+        }
+
+        // 为每个按钮添加点击事件
+        document.querySelectorAll('.openModal').forEach(button => {
+            button.addEventListener('click', () => {
+                const imageSrc = button.getAttribute('data-image'); // 获取对应图片的 URL
+                openModal(imageSrc); // 打开模态框并展示图片
+            });
+        });
+
+        // 点击关闭按钮和模态框外部关闭模态框
+        closeModalButton.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

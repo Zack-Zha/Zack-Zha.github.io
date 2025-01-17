@@ -2,113 +2,143 @@
 <html lang="cn" class="scroll-smooth font-sans">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="font.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-    <!-- banner -->
-    <div class="bg-black w-full h-[640px]">
-    
+  <!-- Navbar -->
+  <div>
+    <nav class="flex justify-between w-full px-16 py-10 z-30 bg-[#F5F7FA]">
+      <div class="flex justify-normal w-1/3 space-x-8">
+        <a href="#works"
+          class="flex justify-center w-[144px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>✏️
+            WORKS</button></a>
+        <a href="#projects"
+          class="flex justify-center w-[178px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>🖼
+            GALLERY</button></a>
+      </div>
+      <div class="flex justify-center w-1/3 h-auto">
+        <a href="#works" class="relative block h-[64px] w-[280px]">
+          <div class="h-full bg-cover bg-center transition-all duration-500 ease-in-out transform hover:scale-110">
+            <img src="media/homepage_island_start.png">
+          </div>
+        </a>
+      </div>
+      <div class="flex justify-end w-1/3">
+        <a href="#projects"
+          class="flex justify-center w-[178px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>👀
+            About Me</button></a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Cover -->
+  <div class="bg-white h-[270px] flex justify-between items-center mx-[96px]">
+    <div>
+      <img src="media/byme_logo.png">
     </div>
-    <div class="bg-black/80 w-full h-[240px]"></div>
-
-    <!-- Footer -->
-    <!-- web端Footer -->
-    <div class="hidden-below-sm">
-        <footer class="bg-[#F5FAFD] h-[108px] text-[20px]">
-            <div class="flex justify-between p-[40px] text-black/60">
-                <p>© 2024 Zack. All rights reserved.</p>
-                <a href="mailto:chengkezha@gmail.com"
-                    class="hover:underline hover:text-black transition-all duration-300 ease-in-out">
-                    chengkezha@gmail.com
-                </a>
-            </div>
-        </footer>
+    <div>
+      <p class="text-[40px] PF-sm">心动来电、视频匹配、热聊房间，<br>
+        从0到1设计差异化社交体验。</p>
     </div>
-    <!-- 移动端Footer -->
-    <div class="visible-below-lg">
-        <footer class="bg-[#F5FAFD] h-[108px] text-[14px]">
-            <div class="flex flex-col items-center p-[40px] text-black/60 space-y-[8px]">
-                <p>© 2024 Zack. All rights reserved.</p>
-                <a href="mailto:chengkezha@gmail.com"
-                    class="hover:underline hover:text-black transition-all duration-300 ease-in-out">
-                    chengkezha@gmail.com
-                </a>
-            </div>
-        </footer>
+  </div>
+  <div>
+    <img src="media/byme/cover.png">
+  </div>
+
+  <!-- 导航 -->
+  <div class="flex bg-[#F5F7FA] h-[180px] justify-between px-[96px]">
+    <p class="text-[48px] PF-sm pt-[64px]">先看亮点。</p>
+    <!-- 按钮 
+    <div class="flex pt-[69.5px] space-x-[24px]">
+      <a href="#works" class="h-[56px] w-[56px]">
+        <div class="transition-all duration-500 ease-in-out transform hover:scale-110">
+          <img src="media/Byme/left.png">
+        </div>
+      </a>
+      <a href="#works" class="h-[56px] w-[56px]">
+        <div class="transition-all duration-500 ease-in-out transform hover:scale-110">
+          <img src="media/Byme/right.png">
+        </div>
+      </a>
     </div>
+    -->
+  </div>
 
-    <!-- 加载动画 -->
-    <script>
-        window.addEventListener('load', function () {
-            const loadingScreen = document.getElementById('loading-screen');
-            loadingScreen.style.display = 'none';
-        });
-    </script>
+<!-- 先看亮点 -->
+<div class="flex flex-wrap bg-[#F5F7FA] pl-[96px]">
+  <div data-image="media/Byme/01.png" class="openModal flex-none mr-[24px] mb-[24px] hover:cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-[1.01] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.1)]">
+    <img src="media/Byme/card_01.png">
+  </div>
+  <div data-image="media/Byme/02.png" class="openModal flex-none mr-[24px] mb-[24px] hover:cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-[1.01] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.1)]">
+    <img src="media/Byme/card_02.png">
+  </div>
+  <div data-image="media/Byme/03.png" class="openModal flex-none mr-[24px] mb-[24px] hover:cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-[1.01] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.1)]">
+    <img src="media/Byme/card_03.png">
+  </div>
+  <div data-image="media/Byme/04.png" class="openModal flex-none mr-[24px] mb-[24px] hover:cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-[1.01] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.1)]">
+    <img src="media/Byme/card_04.png">
+  </div>
+  <div data-image="media/Byme/05.png" class="openModal flex-none mr-[24px] mb-[24px] hover:cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-[1.01] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.1)]">
+    <img src="media/Byme/card_05.png">
+  </div>
+</div>
+<div id="imageModal" class="modal">
+  <button id="closeModal" class="close-button"></button>
+  <img id="modalImage" src="" alt="长图">
+</div>
 
-    <!-- css -->
-    <style>
-        /* 加载页面 */
-        #loading-screen {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
 
-        .loader {
-            border: 8px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 8px solid #000000;
-            width: 60px;
-            height: 60px;
-            animation: spin 1s linear infinite;
-        }
+<script>
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+  const closeModalButton = document.getElementById('closeModal');
 
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
+  // 通用打开模态框函数
+  function openModal(imageSrc) {
+      modalImage.src = imageSrc;
+      modal.classList.add('active');
+  }
 
-            100% {
-                transform: rotate(360deg);
-            }
-        }
+  // 为每个按钮添加点击事件
+  document.querySelectorAll('.openModal').forEach(button => {
+      button.addEventListener('click', () => {
+          const imageSrc = button.getAttribute('data-image'); // 获取对应图片的 URL
+          openModal(imageSrc); // 打开模态框并展示图片
+      });
+  });
 
-        /* 断点 */
+  // 点击关闭按钮和模态框外部关闭模态框
+  closeModalButton.addEventListener('click', () => {
+      modal.classList.remove('active');
+  });
 
-        /* 默认隐藏 */
-        .hidden-below-sm {
-            display: none;
-        }
+  modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
+          modal.classList.remove('active');
+      }
+  });
+</script>
 
-        /* 仅当屏幕宽度大于等于1024px时显示 */
-        @media (min-width: 1024px) {
-            .hidden-below-sm {
-                display: block;
-            }
-        }
-
-        /* 默认隐藏 */
-        .visible-below-lg {
-            display: none;
-        }
-
-        /* 屏幕宽度小于1024px时显示 */
-        @media (max-width: 1023px) {
-            .visible-below-lg {
-                display: block;
-            }
-        }
-    </style>
+  <!-- Footer -->
+  <div class="hidden-below-sm">
+    <footer class="bg-[#F5F7FA] text-[20px]">
+      <div class="flex justify-between p-[40px] text-black/60">
+        <p>© 2024 Zack. All rights reserved.</p>
+        <a href="mailto:chengkezha@gmail.com"
+          class="hover:underline hover:text-black transition-all duration-300 ease-in-out">
+          chengkezha@gmail.com
+        </a>
+      </div>
+    </footer>
+  </div>
 
 </body>
+
+</html>

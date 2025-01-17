@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手动轮播示例</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- 引入 jQuery -->
+</head>
+<body>
+    <div class="relative w-full max-w-lg mx-auto">
+        <div id="carousel" class="overflow-hidden">
+            <div class="flex transition-transform duration-300" id="carouselItems">
+                <div class="min-w-full bg-blue-500 p-6 text-white">Card 1</div>
+                <div class="min-w-full bg-red-500 p-6 text-white">Card 2</div>
+                <div class="min-w-full bg-green-500 p-6 text-white">Card 3</div>
+            </div>
+        </div>
+        <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">❮</button>
+        <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">❯</button>
+    </div>
+
+    <script src="carousel.js"></script> <!-- 引用 JavaScript 文件 -->
+</body>
+</html>
