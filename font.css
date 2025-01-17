@@ -77,8 +77,8 @@ body {
   /* 显示模态框 */
 }
 
-img {
-  max-width: 80%;
+.modal img { /* 只改变modal下的img */
+  width: 75%;
   /* 确保图片不溢出 */
   height: auto;
   /* 使图片按比例缩放 */
