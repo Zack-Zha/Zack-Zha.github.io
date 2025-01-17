@@ -78,10 +78,18 @@ body {
 }
 
 .modal img { /* 只改变modal下的img */
-  width: 75%;
+  width: 68%;
   /* 确保图片不溢出 */
   height: auto;
   /* 使图片按比例缩放 */
   margin: 0 auto;
   /* 图片居中 */
+}
+
+.colorful_title {
+  width: 960px;
+  background: linear-gradient(270deg, #ff2e2e, #f84da7 20%, #d675f7 40%, #a09eff 60%, #56c4ff 80%, #00e1ff);
+  -webkit-background-clip: text; /* Safari and older Chrome */
+  background-clip: text; /* Standard property for other browsers */
+  -webkit-text-fill-color: transparent;
 }
