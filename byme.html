@@ -135,20 +135,6 @@
     </div>
   </div>
 
-  <!-- 图片预加载 -->
-  <script>
-    function preloadImages() {
-      const images = document.querySelectorAll('[data-image]');
-      images.forEach((imgElement) => {
-        const img = new Image();
-        img.src = imgElement.getAttribute('data-image');
-      });
-    }
-
-    // Preload images when the DOM is fully loaded
-    document.addEventListener('DOMContentLoaded', preloadImages);
-  </script>
-
   <!-- 弹窗 -->
   <div id="imageModal" class="modal animate__fadeIn animate__animated">
     <button id="closeModal" class="close-button"></button>
@@ -184,6 +170,19 @@
         modal.classList.remove('active');
       }
     });
+
+    // 预加载图片
+    function preloadImages() {
+      const images = document.querySelectorAll('.openModal');
+      images.forEach(img => {
+        const imageUrl = img.getAttribute('data-image');
+        const imgElement = new Image(); // 创建一个新的 Image 对象
+        imgElement.src = imageUrl; // 设置 src 属性以预加载
+      });
+    }
+
+    // 页面加载时调用预加载功能
+    window.onload = preloadImages;
   </script>
 
   <!-- 最后看看Byme诞生的故事 -->
