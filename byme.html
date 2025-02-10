@@ -180,40 +180,52 @@
       }
     });
   
-    // 预加载图片
+    // 预加载图片并更新整体加载进度
     function preloadImages() {
-      const images = document.querySelectorAll('.openModal');
-      const totalImages = images.length;
+      const externalImages = document.querySelectorAll('img'); // 所有 img 标签
+      const imagesToLoad = [...externalImages].filter(img => img.src !== ''); // 过滤掉没有 src 的 img
+      const totalImages = imagesToLoad.length;
       let loadedImages = 0;
   
       progressContainer.style.display = 'block'; // 显示进度条
   
-      images.forEach(img => {
+      // 定义一个函数来更新进度
+      const updateProgress = () => {
+        loadedImages++;
+        const progressPercentage = (loadedImages / totalImages) * 100;
+        progressBar.style.width = progressPercentage + '%';
+  
+        // 如果所有图片都加载完成，隐藏进度条
+        if (loadedImages === totalImages) {
+          setTimeout(() => {
+            progressContainer.style.display = 'none'; // 隐藏进度条
+          }, 500); // 延迟500ms再隐藏，以便用户看到完成的状态
+        }
+      };
+  
+      // 加载外部图片
+      imagesToLoad.forEach(img => {
+        // 当图片加载成功后
+        img.onload = updateProgress;
+        img.src = img.src; // 触发浏览器去加载图片
+      });
+  
+      // 加载模态框内部的图片
+      const modalImages = document.querySelectorAll('.openModal');
+      modalImages.forEach(img => {
         const imageUrl = img.getAttribute('data-image');
         const imgElement = new Image();
   
         // 当图片加载成功后
-        imgElement.onload = function() {
-          loadedImages++;
-          // 更新进度条的宽度
-          const progressPercentage = (loadedImages / totalImages) * 100;
-          progressBar.style.width = progressPercentage + '%';
-  
-          // 如果所有图片都加载完成，隐藏进度条
-          if (loadedImages === totalImages) {
-            setTimeout(() => {
-              progressContainer.style.display = 'none'; // 隐藏进度条
-            }, 500); // 延迟500ms再隐藏，以便用户看到完成的状态
-          }
-        }
-  
-        imgElement.src = imageUrl; // 设置 src 属性以预加载
+        imgElement.onload = updateProgress;  // 通过相同的方式更新进度
+        imgElement.src = imageUrl; // 预加载模态框的图片
       });
     }
   
     // 页面加载时调用预加载功能
     window.onload = preloadImages;
   </script>
+  
   
 
   <!-- 最后看看Byme诞生的故事 -->
