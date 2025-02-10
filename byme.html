@@ -6,12 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="font.css">
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
+    <!--进度条 -->
+  <div id="progress-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 5px; background-color: #F5F7FA; z-index: 9999; display: none;">
+    <div id="progress-bar" style="height: 100%; width: 0; background-color: #7c7c7c;"></div>
+  </div>
+  
   <!-- Navbar -->
   <div>
     <nav class="flex justify-between w-full px-16 py-10 z-30 bg-[#F5F7FA] animate__animated animate__fadeInDown">
@@ -145,13 +152,15 @@
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
     const closeModalButton = document.getElementById('closeModal');
-
+    const progressContainer = document.getElementById('progress-container');
+    const progressBar = document.getElementById('progress-bar');
+  
     // 通用打开模态框函数
     function openModal(imageSrc) {
       modalImage.src = imageSrc;
       modal.classList.add('active');
     }
-
+  
     // 为每个按钮添加点击事件
     document.querySelectorAll('.openModal').forEach(button => {
       button.addEventListener('click', () => {
@@ -159,31 +168,53 @@
         openModal(imageSrc); // 打开模态框并展示图片
       });
     });
-
+  
     // 点击关闭按钮和模态框外部关闭模态框
     closeModalButton.addEventListener('click', () => {
       modal.classList.remove('active');
     });
-
+  
     modal.addEventListener('click', (event) => {
       if (event.target === modal) {
         modal.classList.remove('active');
       }
     });
-
+  
     // 预加载图片
     function preloadImages() {
       const images = document.querySelectorAll('.openModal');
+      const totalImages = images.length;
+      let loadedImages = 0;
+  
+      progressContainer.style.display = 'block'; // 显示进度条
+  
       images.forEach(img => {
         const imageUrl = img.getAttribute('data-image');
-        const imgElement = new Image(); // 创建一个新的 Image 对象
+        const imgElement = new Image();
+  
+        // 当图片加载成功后
+        imgElement.onload = function() {
+          loadedImages++;
+          // 更新进度条的宽度
+          const progressPercentage = (loadedImages / totalImages) * 100;
+          progressBar.style.width = progressPercentage + '%';
+  
+          // 如果所有图片都加载完成，隐藏进度条
+          if (loadedImages === totalImages) {
+            setTimeout(() => {
+              progressContainer.style.display = 'none'; // 隐藏进度条
+            }, 500); // 延迟500ms再隐藏，以便用户看到完成的状态
+          }
+        }
+  
         imgElement.src = imageUrl; // 设置 src 属性以预加载
       });
     }
-
+  
     // 页面加载时调用预加载功能
     window.onload = preloadImages;
   </script>
+  
 
   <!-- 最后看看Byme诞生的故事 -->
   <!-- 导航 -->
