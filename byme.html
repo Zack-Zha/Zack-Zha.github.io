@@ -14,7 +14,7 @@
 <body>
   <!-- Navbar -->
   <div>
-    <nav class="flex justify-between w-full px-16 py-10 z-30 bg-[#F5F7FA]">
+    <nav class="flex justify-between w-full px-16 py-10 z-30 bg-[#F5F7FA] animate__animated animate__fadeInDown">
       <div class="flex justify-normal w-1/3 space-x-8">
         <a href="index.html"
           class="flex justify-center w-[144px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>✏️
@@ -40,17 +40,16 @@
 
   <!-- Cover -->
   <div class="bg-white h-[270px] flex justify-between items-center mx-[96px]">
-    <div>
+    <div class="animate__animated animate__fadeInLeft">
       <img src="media/byme_logo.png">
     </div>
     <div>
-      <p class="text-[40px] PF-sm">心动来电、视频匹配、热聊房间，<br>
+      <p class="text-[40px] PF-sm animate__animated animate__fadeInRight">心动来电、视频匹配、热聊房间，<br>
         从0到1设计差异化社交体验。</p>
     </div>
   </div>
   <div>
-    <img class="w-full h-auto"
-      src="https://raw.githubusercontent.com/Zack-Zha/Zack-Zha.github.io/refs/heads/main/media/Byme/cover.png">
+    <img data-image="media/byme/cover.png" class="w-full h-auto" src="media/byme/cover.png">
   </div>
 
   <!-- 导航 -->
@@ -73,7 +72,7 @@
   </div>
 
   <!-- 先看亮点 -->
-  <div class=" bg-[#F5F7FA] px-[96px]">
+  <div class="bg-[#F5F7FA] px-[96px]">
     <div class="flex">
       <div data-image="media/Byme/01.png"
         class="openModal mr-[24px] mb-[24px] hover:cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-[1.01] hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.1)]">
@@ -101,7 +100,6 @@
       </div>
     </div>
   </div>
-
 
   <!-- 再看难点 -->
   <!-- 导航 -->
@@ -137,12 +135,25 @@
     </div>
   </div>
 
+  <!-- 图片预加载 -->
+  <script>
+    function preloadImages() {
+      const images = document.querySelectorAll('[data-image]');
+      images.forEach((imgElement) => {
+        const img = new Image();
+        img.src = imgElement.getAttribute('data-image');
+      });
+    }
+
+    // Preload images when the DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', preloadImages);
+  </script>
+
   <!-- 弹窗 -->
-  <div id="imageModal" class="modal">
+  <div id="imageModal" class="modal animate__fadeIn animate__animated">
     <button id="closeModal" class="close-button"></button>
     <img id="modalImage" src="" alt="长图">
   </div>
-
 
   <script>
     const modal = document.getElementById('imageModal');
@@ -175,19 +186,17 @@
     });
   </script>
 
-
   <!-- 最后看看Byme诞生的故事 -->
   <!-- 导航 -->
   <div class="flex bg-[#F5F7FA] h-[180px] justify-between px-[96px]">
     <p class="text-[48px] PF-sm pt-[64px]">最后看看Byme诞生的故事。</p>
   </div>
-  <div class=" bg-white px-[96px] pt-[96px] flex justify-between">
-    <div>
-      <p class="text-[64px] PF-sm colorful_title">身处竞争激烈的出海社交市场，<br>
-        我们如何设计差异化的用户体验？</p>
+  <div class=" bg-white px-[96px] pt-[96px] flex space-x-[36px]">
+    <div class="w-2/3">
+      <p class="w-full text-[56px] PF-sm colorful_title">身处竞争激烈的出海社交市场，我们如何设计差异化的用户体验？</p>
     </div>
-    <div>
-      <p class="text-[18px] PF-r text-[#BFBFBF]">*鉴于保密协议，我无法向您提供PPT内的详细内容。</p>
+    <div class="w-1/3">
+      <p class="flex justify-end [18px] PF-r text-[#BFBFBF]">*鉴于保密协议，我无法向您提供PPT内的详细内容。</p>
     </div>
   </div>
   <div class="px-[96px] py-[56px]">
@@ -231,12 +240,12 @@
   </div>
 
   <!-- Ending -->
-    <div class="bg-[#F5F7FA] text-[24px] PF-sm">
-      <div class="flex justify-center p-[40px] text-[#808080]">
-        <p>🎉感谢您看到这里！</p>
-        <a href="#works" class="text-[#1C8AFF] hover:underline ">点此浏览下一个项目。</a>
-      </div>
+  <div class="bg-[#F5F7FA] text-[24px] PF-sm">
+    <div class="flex justify-center p-[40px] text-[#808080]">
+      <p>🎉感谢您看到这里！</p>
+      <a href="#works" class="text-[#1C8AFF] hover:underline ">点此浏览下一个项目：Qume。</a>
     </div>
+  </div>
 
   <!-- Footer -->
   <div>
