@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="cn" class="scroll-smooth font-sans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美的·SUPER UX Model</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="font.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="min-w-[1440px]">
+    <!--进度条 -->
+    <div id="progress-container"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 5px; background-color: #F5F7FA; z-index: 9999; display: none;">
+        <div id="progress-bar" style="height: 100%; width: 0; background-color: #7c7c7c;"></div>
+    </div>
+
+    <!-- Navbar -->
+    <div>
+        <nav class="flex justify-between w-full px-16 py-10 z-30 bg-[#F5F7FA] animate__animated animate__fadeInDown">
+            <div class="flex justify-normal w-1/3 space-x-8">
+                <a href="index.html"
+                    class="flex justify-center w-[144px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>✏️
+                        WORKS</button></a>
+                <a href="https://www.figma.com/proto/ide4uqnnv0sar0qPGG68Zv/Zack's-More-Works?page-id=0%3A1&node-id=1-1332&p=f&viewport=192%2C30%2C0.2&t=z0v4uU6qSHKAFnIs-1&scaling=min-zoom&content-scaling=fixed"
+                    target="_blank"
+                    class="flex justify-center w-[178px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>🖼
+                        GALLERY</button></a>
+            </div>
+            <div class="flex justify-center w-1/3 h-auto">
+                <a href="#works" class="relative block h-[64px] w-[280px]">
+                    <div
+                        class="h-full bg-cover bg-center transition-all duration-500 ease-in-out transform hover:scale-110">
+                        <img src="media/homepage_island_start.png">
+                    </div>
+                </a>
+            </div>
+            <div class="flex justify-end w-1/3">
+                <a href="#projects"
+                    class="flex justify-center w-[178px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>👀
+                        About Me</button></a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Cover -->
+    <div class="bg-white h-[270px] flex items-center px-[96px]">
+        <div class="flex items-center animate__animated animate__fadeInLeft">
+            <div><img src="https://zackzha-img.oss-cn-shenzhen.aliyuncs.com/midea_logo.png"></div>
+            <p class="text-[80px] PF-sm text-black pl-[24px]">美的·SUPER UX Model</p>
+        </div>
+    </div>
+    <!-- Overview -->
+    <div class="flex bg-white h-[250px] justify-between px-[96px] animate__animated animate__fadeIn">
+        <div>
+            <p class="text-[32px] PF-sm">Role</p>
+            <p class="pt-[24px] text-[24px] PF-r text-black/60">Research Assistant<br>
+                Expert Interviews<br>
+                Data Analysis</p>
+        </div>
+        <div>
+            <p class="text-[32px] PF-sm">Overview</p>
+            <p class="pt-[24px] text-[24px] PF-r text-black/60">Client: 美的<br>
+                Tools: Figma, NVivo...<br>
+                Timeline: 2021.09 - 2021.12</p>
+        </div>
+        <div>
+            <p class="text-[32px] PF-sm">Keywords</p>
+            <p class="pt-[24px] text-[24px] PF-r text-black/60">User Experience Metrics Model<br>
+                IoT Product System<br>
+                Smart Home</p>
+        </div>
+    </div>
+    <div>
+        <img class="w-full animate__animated animate__fadeIn" src="https://zackzha-img.oss-cn-shenzhen.aliyuncs.com/midea_content_cover.png">
+    </div>
+
+    <!-- Content -->
+    <div class="mt-[96px] px-[96px] flex ">
+        <div class="flex w-2/5">
+            <p class="PF-sm text-black text-[72px]">Brief</p>
+        </div>
+        <div class="flex-col w-3/5 py-[16px] space-y-[36px]">
+            <p class="PF-sm text-black text-[32px]">SUPER is a model that includes five dimensions and is specifically
+                designed to measure the user experience of smart home products.</p>
+            <p class="PF-r text-black/60 text-[24px]">The smart home field uses the SUPER model to build a UX metrics
+                model from five metrics: Satisfaction, Usability, Performance, Engagement, and Relevant. According to
+                the path of smart home use, IoT user characteristics, the level of experience in the beauty of the home
+                to filter out the core indicators at all levels, and establish the appropriate UX model, and finally
+                output the user experience report, and once again feedback to the design team, to form a virtuous cycle.
+            </p>
+        </div>
+    </div>
+    <div class="mt-[96px] px-[96px] flex">
+        <div class="flex w-2/5">
+            <p class="PF-sm text-black text-[72px]">Process</p>
+        </div>
+        <div class="flex-col w-3/5 py-[16px] space-y-[36px]">
+            <div class="flex space-x-[16px] items-center">
+                <img class="w-[72px] h-[72px]" src="media/midea/icon_72_video.png">
+                <a href="https://meia.me/course/170362" target="_blank"
+                    class="PF-sm text-[#006AFF] text-[32px] hover:underline">Click here to view the program introduction
+                    video.<br>
+                    单击此处观看项目介绍视频。</a>
+            </div>
+            <p class="PF-r text-black/60 text-[24px]">This presentation introduces the content and construction process
+                of the user experience metric model "SUPER". On the one hand, it can guide product managers and
+                designers in IoT field to carry out scientific experience metrics and product optimization. On the other
+                hand, designers in other industries can also learn from the model construction process to build a metric
+                model that meets their own business characteristics.</p>
+        </div>
+    </div>
+    <div class="my-[96px] px-[96px] flex">
+        <div class="flex w-2/5">
+            <p class="PF-sm text-black text-[72px]">My Contribution</p>
+        </div>
+        <div class="flex-col w-3/5 py-[16px] space-y-[36px]">
+            <p class="PF-r text-black/60 text-[24px]">The work was very challenging, but that pushed me to learn more
+                than at any other internship.
+            </p>
+            <div class="flex-col space-y-[24px]">
+                <div
+                    class="flex-row space-y-[16px] bg-[#DBFFCC] rounded-[32px] border border-[#4DFF00] px-[36px] py-[32px]">
+                    <div class="flex flex-row items-center space-x-[16px]">
+                        <img class="w-[40px] h-[40px]" src="media/midea/icon_40_search.png">
+                        <p class="text-[#0A2600] text-[32px] PF-sm">Model Research, Review, and Analysis</p>
+                    </div>
+                    <p class="text-[#1A6600] text-[24px] PF-r">Analyze and deconstruct 8 user experience metric models
+                        such as NPS, HEART, PTECH, etc., sort out 24 dimensions and 248 indicators based on the home
+                        appliance usage scenarios, and filter and generate 44 coarse indicators through the Hierarchical
+                        Analysis Method and the K-J method, ultimately forming the SUPER, the first user experience
+                        metric model in the field of IoT, to drive the quantification of the experience of Midea's IoT
+                        product line.</p>
+                </div>
+                <div
+                    class="flex-row space-y-[16px] bg-[#DBFFCC] rounded-[32px] border border-[#4DFF00] px-[36px] py-[32px]">
+                    <div class="flex flex-row items-center space-x-[16px]">
+                        <img class="w-[40px] h-[40px]" src="media/midea/icon_40_interaction.png">
+                        <p class="text-[#0A2600] text-[32px] PF-sm">Interaction Walkthrough</p>
+                    </div>
+                    <p class="text-[#1A6600] text-[24px] PF-r">Led 10+ interaction walkthroughs for MEIJU APP and home
+                        appliance service system, identified 30+ key experience issues using SUPER model, pushed up and
+                        optimized the model performance, and wrote about 5,000 words of usability walkthrough report.
+                    </p>
+                </div>
+                <div
+                    class="flex-row space-y-[16px] bg-[#DBFFCC] rounded-[32px] border border-[#4DFF00] px-[36px] py-[32px]">
+                    <div class="flex flex-row items-center space-x-[16px]">
+                        <img class="w-[40px] h-[40px]" src="media/midea/icon_40_interview.png">
+                        <p class="text-[#0A2600] text-[32px] PF-sm">Expert Interviews</p>
+                    </div>
+                    <p class="text-[#1A6600] text-[24px] PF-r">Organized and facilitated 4 expert interviews and user
+                        workshops, participated in writing interview scripts and research outlines, used NVivo to
+                        qualitatively analyze the corpus of interview results, and executed visualization and debriefing
+                        using Tableau, PPT, and other tools.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ending -->
+    <div class="bg-white text-[24px] PF-sm">
+        <div class="flex justify-center p-[40px] text-[#808080]">
+            <p>🎉感谢您看到这里！</p>
+            <a href="gafalib.html" target="_blank" class="text-black hover:underline ">点此浏览下一个项目：GAFAlib。</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div>
+        <footer class="bg-white text-[20px]">
+            <div class="flex justify-between p-[40px] text-black/60">
+                <p>© 2025 Zack. All rights reserved.</p>
+                <a href="mailto:chengkezha@gmail.com"
+                    class="hover:underline hover:text-black transition-all duration-300 ease-in-out">
+                    chengkezha@gmail.com
+                </a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
