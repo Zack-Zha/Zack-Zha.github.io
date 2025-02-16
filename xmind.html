@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="cn" class="scroll-smooth font-sans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xmind·AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="font.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="min-w-[1440px]">
+    <!--进度条 -->
+    <div id="progress-container"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 5px; background-color: #F5F7FA; z-index: 9999; display: none;">
+        <div id="progress-bar" style="height: 100%; width: 0; background-color: #7c7c7c;"></div>
+    </div>
+
+    <!-- Navbar -->
+    <div>
+        <nav class="flex justify-between w-full px-16 py-10 z-30 bg-[#F5F7FA] animate__animated animate__fadeInDown">
+            <div class="flex justify-normal w-1/3 space-x-8">
+                <a href="index.html"
+                    class="flex justify-center w-[144px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>✏️
+                        WORKS</button></a>
+                <a href="https://www.figma.com/proto/ide4uqnnv0sar0qPGG68Zv/Zack's-More-Works?page-id=0%3A1&node-id=1-1332&p=f&viewport=192%2C30%2C0.2&t=z0v4uU6qSHKAFnIs-1&scaling=min-zoom&content-scaling=fixed"
+                    target="_blank"
+                    class="flex justify-center w-[178px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>🖼
+                        GALLERY</button></a>
+            </div>
+            <div class="flex justify-center w-1/3 h-auto">
+                <a href="#works" class="relative block h-[64px] w-[280px]">
+                    <div
+                        class="h-full bg-cover bg-center transition-all duration-500 ease-in-out transform hover:scale-110">
+                        <img src="media/homepage_island_start.png">
+                    </div>
+                </a>
+            </div>
+            <div class="flex justify-end w-1/3">
+                <a href="about.html" target="_blank"
+                    class="flex justify-center w-[178px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>👀
+                        About Me</button></a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Cover -->
+    <div class="bg-white h-[270px] flex items-center px-[96px]">
+        <div class="flex items-center animate__animated animate__fadeInLeft">
+            <div><img src="https://zackzha-img.oss-cn-shenzhen.aliyuncs.com/xmind_logo_96.png"></div>
+            <p class="text-[80px] PF-sm text-black pl-[24px]">Xmind·AI 概念设计</p>
+        </div>
+    </div>
+    <!-- Overview -->
+    <div class="flex bg-white h-[250px] justify-between px-[96px] animate__animated animate__fadeIn">
+        <div>
+            <p class="text-[32px] PF-sm">Role</p>
+            <p class="pt-[24px] text-[24px] PF-r text-black/60">UX/UI Design<br>
+                Interaction Design<br>
+                Product Design</p>
+        </div>
+        <div>
+            <p class="text-[32px] PF-sm">Overview</p>
+            <p class="pt-[24px] text-[24px] PF-r text-black/60">
+                Xmind·AI是一个面向未来的概念<br>设计项目，通过思维导图“显化”AI<br>思考过程，并允许用户精准修改。</p>
+        </div>
+        <div>
+            <p class="text-[32px] PF-sm">Keywords</p>
+            <p class="pt-[24px] text-[24px] PF-r text-black/60">Conceptual Design<br>
+                Future Design<br>
+                Nodal Programming</p>
+        </div>
+    </div>
+    <div>
+        <img class="w-full animate__animated animate__fadeIn"
+            src="https://zackzha-img.oss-cn-shenzhen.aliyuncs.com/cover_xmind.png">
+    </div>
+
+    <!-- Content -->
+    <div class="my-[96px] px-[96px] flex">
+        <div class="flex w-2/5">
+            <p class="PF-sm text-black text-[72px]">设计批评</p>
+        </div>
+        <div class="flex-col w-3/5 py-[16px] space-y-[36px]">
+            <p class="PF-r text-black/60 text-[24px]">
+                当前LLM模型应用所构建的对话式生成界面范式，虽然使AI表现得更“像人”，但其界面隐喻并不符合人道，甚至会导致用户丧失主体性。具体而言：
+            </p>
+            <div class="flex-col space-y-[24px]">
+                <div
+                    class="flex-row space-y-[16px] bg-[#FFF2F2] rounded-[32px] border border-[#FFC2C2] px-[36px] py-[32px]">
+                    <p class="text-black text-[32px] PF-sm">“拟人化”设计中的主体性剥夺</p>
+                    <p class="text-black/60 text-[24px] PF-r">
+                        现有对话界面过度模拟人类平等对话角色（如“助手”“导师”），实则强制用户接受单向信息加工黑箱。这种拟人隐喻掩盖了机器本质运行机制，导致用户误将机械流程视为主观意志，削弱其主动控制与干预权。
+                    </p>
+                </div>
+                <div
+                    class="flex-row space-y-[16px] bg-[#FFF2F2] rounded-[32px] border border-[#FFC2C2] px-[36px] py-[32px]">
+                    <p class="text-black text-[32px] PF-sm">“过程黑箱”中封闭的思维路径</p>
+                    <p class="text-black/60 text-[24px] PF-r">
+                        LLM默认的线性问答链条（输入-响应闭环）形成认知陷阱：用户无法在对话中途修正模型潜在推理错误，被迫通过“重新生成”或“追问”覆盖错误轨迹，最终陷入无限校正的“思维泥潭”。</p>
+                </div>
+                <div
+                    class="flex-row space-y-[16px] bg-[#FFF2F2] rounded-[32px] border border-[#FFC2C2] px-[36px] py-[32px]">
+                    <p class="text-black text-[32px] PF-sm">表层交互隐喻与底层逻辑的认知割裂</p>
+                    <p class="text-black/60 text-[24px] PF-r">
+                        基于文字聊天的界面视觉（气泡框、打字动画）刻意营造“同步交流”错觉，但背后是异步生成与不可逆的token流输出。这种断裂使用户对决策过程的时空感知错位，加剧对AI思维可信度的怀疑。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-[96px] px-[96px] flex">
+        <div class="flex w-2/5">
+            <p class="PF-sm text-black text-[72px]">HMW...?</p>
+        </div>
+        <div class="flex-col w-3/5 py-[16px] space-y-[36px]">
+            <p class="PF-r text-black/60 text-[24px]">
+                针对上述问题，笔者挑战性地提出了三大HMW，并试图在后文中提供思考方向与解决方案，指向一个全新的、可能的未来。
+            </p>
+            <div class="flex-col space-y-[24px]">
+                <div
+                    class="flex-row space-y-[16px] bg-[#DBFFCC] rounded-[32px] border border-[#4DFF00] px-[36px] py-[32px]">
+                    <p class="text-black text-[32px] PF-sm">动态干预机制的可行性</p>
+                    <p class="text-black/60 text-[24px] PF-r">
+                        用户能否通过可视化界面实时介入AI的隐性思维层（如调整推理路径、修正记忆调用权重），同时避免过度干预导致的逻辑断裂？
+                    </p>
+                </div>
+                <div
+                    class="flex-row space-y-[16px] bg-[#DBFFCC] rounded-[32px] border border-[#4DFF00] px-[36px] py-[32px]">
+                    <p class="text-black text-[32px] PF-sm">多模型协作中的竞争与融合策略</p>
+                    <p class="text-black/60 text-[24px] PF-r">
+                        如何建立多模型协同框架，使不同AI在争议性任务中实现动态分工（如辩论投票、权重裁决），而非简单的结果拼接？</p>
+                </div>
+                <div
+                    class="flex-row space-y-[16px] bg-[#DBFFCC] rounded-[32px] border border-[#4DFF00] px-[36px] py-[32px]">
+                    <p class="text-black text-[32px] PF-sm">表层交互隐喻与底层逻辑的认知割裂</p>
+                    <p class="text-black/60 text-[24px] PF-r">
+                        在部分公开隐藏层信息的基础上，如何通过思维链可视化技术降低用户认知负荷？既要暴露关键决策节点，又要防止过度技术细节造成理解混淆。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-[96px] px-[96px] flex">
+        <div class="flex w-2/5">
+            <p class="PF-sm text-black text-[72px]">隐喻分析</p>
+        </div>
+        <div class="flex-col w-3/5 py-[16px] space-y-[36px]">
+            <p class="PF-r text-black/60 text-[24px]">
+                以Figma这类“AI+思维导图”产品为例，笔者试图以媒介环境学的“媒介即隐喻”理论，描述其隐喻困境。
+            </p>
+            <div class="flex-col space-y-[24px]">
+                <div
+                    class="flex-row space-y-[16px] bg-[#F7F7F7] rounded-[32px] border border-[#DFDFDF] px-[36px] py-[32px]">
+                    <p class="text-black text-[32px] PF-sm">单向编辑——“美容困境”</p>
+                    <p class="text-black/60 text-[24px] PF-r">
+                        当前工具仅允许用户对导出导图进行排版美化（颜色、形状、箭头），无法在导图结构形成的中间层植入干预。想要调整结果仍需退回对话框重写指令。这种“美容院式编辑”与真正的“神经手术式干预”隔着交互厚壁。
+                    </p>
+                </div>
+                <div
+                    class="flex-row space-y-[16px] bg-[#F7F7F7] rounded-[32px] border border-[#DFDFDF] px-[36px] py-[32px]">
+                    <p class="text-black text-[32px] PF-sm">导图生成——“换壳游戏”</p>
+                    <p class="text-black/60 text-[24px] PF-r">
+                        将对话文字流翻译为思维导图节点的过程，本质是代码格式转换的“换壳游戏”。AI的决策树并未被拆解为可溯源的推理单元，生成的树形图仅是Markdown的转换结果。</p>
+                </div>
+                <div
+                    class="flex-row space-y-[16px] bg-[#F7F7F7] rounded-[32px] border border-[#DFDFDF] px-[36px] py-[32px]">
+                    <p class="text-black text-[32px] PF-sm">静态节点——“玻璃展柜”</p>
+                    <p class="text-black/60 text-[24px] PF-r">
+                        Figma导图节点固化后即成为数字墓碑，这种单向冻结机制让AI思维过程停留在玻璃展柜中供人观赏，却拒绝触碰。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-[96px] px-[96px] flex">
+        <div class="flex w-2/5">
+            <p class="PF-sm text-black text-[72px]">新的未来</p>
+        </div>
+        <div class="flex-col w-3/5 py-[16px] space-y-[36px]">
+            <p class="PF-r text-black/60 text-[24px]">
+                思维导图作为“认知手术台”，为多模态AI的界面交互设计指出了一个新的未来。
+            </p>
+            <div class="flex-col space-y-[24px]">
+                <div
+                    class="flex-row space-y-[16px] bg-[#F7F7F7] rounded-[32px] border border-[#DFDFDF] px-[36px] py-[32px]">
+                    <p class="text-black text-[32px] PF-sm">思维图谱替代对话气泡</p>
+                    <p class="text-black/60 text-[24px] PF-r">
+                        实时可视化的思维结构（概念关联、权重分布、路径分叉）能使信息流转化为可操控的立体地图，用户可像旋转魔方般切换视角观察逻辑脉络。
+                    </p>
+                </div>
+                <div
+                    class="flex-row space-y-[16px] bg-[#F7F7F7] rounded-[32px] border border-[#DFDFDF] px-[36px] py-[32px]">
+                    <p class="text-black text-[32px] PF-sm">思维手术台的隐喻革命</p>
+                    <p class="text-black/60 text-[24px] PF-r">
+                        借助思维导图技术，AI思维层便成为可按需展开的“器官标本”。用户只需剥开“深度思考”的皮层后，既可切除错误连接的神经（删除错误逻辑链），也能注射新的记忆血清（插入定制知识集）。</p>
+                </div>
+                <div
+                    class="flex-row space-y-[16px] bg-[#F7F7F7] rounded-[32px] border border-[#DFDFDF] px-[36px] py-[32px]">
+                    <p class="text-black text-[32px] PF-sm">双向思维同步的未来</p>
+                    <p class="text-black/60 text-[24px] PF-r">
+                        导图并非单向操作界面，而是用户与AI共享的神经网络接口。当用户提高节点权重时，AI同步调整隐藏层参数；而AI主动标红的“逻辑薄弱环节”又会催使用户二次手术——形成思维层面的共生进化，维持用户主体性。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-[96px] px-[96px] flex ">
+        <div class="flex w-2/5">
+            <p class="PF-sm text-black text-[72px]">功能架构</p>
+        </div>
+        <div class="flex-col w-3/5 py-[16px] space-y-[36px]">
+            <p class="PF-sm text-black text-[32px]">下面的功能架构实现了从「对话式表层交互」到「神经手术式深度操作」的质变。用户不仅是指令输入者，更是AI认知架构师。</p>
+        </div>
+    </div>
+    <img class="mt-[56px]" src="https://zackzha-img.oss-cn-shenzhen.aliyuncs.com/xmind_frame.png">
+    <div class="mt-[96px] px-[96px] flex ">
+        <div class="flex w-2/5">
+            <p class="PF-sm text-black text-[72px]">解决方案</p>
+        </div>
+    </div>
+    <div class="mt-[96px] px-[96px] flex ">
+        <div class="flex w-2/5">
+            <p class="PF-sm text-black text-[72px]">01 核心体验</p>
+        </div>
+        <div class="flex-col w-3/5 py-[16px] space-y-[36px]">
+            <p class="PF-sm text-black text-[32px]">下面的示意图展示了提示词→连接大模型电池→生成深度思考导图→编辑节点属性的全流程。用户可以通过节点编程修改思考内容。</p>
+        </div>
+    </div>
+    <img class="mt-[56px]" src="https://zackzha-img.oss-cn-shenzhen.aliyuncs.com/xmind_core_UX.png">
+    <div class="mt-[96px] px-[96px] flex ">
+        <div class="flex w-2/5">
+            <p class="PF-sm text-black text-[72px]">02 交互细节</p>
+        </div>
+        <div class="flex-col w-3/5 py-[16px] space-y-[36px]">
+            <p class="PF-sm text-black text-[32px]">下面的示意图展示了主要操作面板（即画布）上的交互细节，包括电池输入、Flow槽、电池输出等。</p>
+        </div>
+    </div>
+    <img class="mt-[56px]" src="https://zackzha-img.oss-cn-shenzhen.aliyuncs.com/xmind_ixd_detail.png">
+    <div class="mt-[96px] px-[96px] flex ">
+        <div class="flex w-2/5">
+            <p class="PF-sm text-black text-[72px]">更进一步</p>
+        </div>
+        <div class="flex-col w-3/5 py-[16px] space-y-[36px]">
+            <p class="PF-sm text-black text-[32px]">尽管该设计仍处于初级概念阶段，但从电池图模块化交互与动态思维导图的深度耦合中，已可见其重塑AI交互范式的潜力——将认知黑箱转化为可视化的神经回路手术台。未来的任务包括：</p>
+            <ul class="ml-[24px] PF-r text-[24px] list-disc ">
+                <li><a class="text-black PF-sm">探索跨模态的深度结合：</a><a class="text-black/60">主要是解决不同智能模块（文本/图像/代码）的参数兼容与效能平衡。例如，建立「电池适配层」，自动转换Stable Diffusion参数为GPT可理解的自然语言指令，优化学习成本和使用门槛。</a>
+                </li>
+                <li><a class="text-black PF-sm">验证双向干预机制的可靠性：</a><a class="text-black/60">主要是确保人类操作与AI自主推理的动态平衡。例如，设计「可视化的逻辑测试系统」，测试多次修改关键节点后系统的恢复能力。</a>
+                </li>
+                <li><a class="text-black PF-sm">探索认知工作流重塑：</a><a class="text-black/60">主要是将个体的思考编辑行为，升维为群体的思考连接行为。例如，设计「电池协作工作流」，允许多位用户共同编辑工作流，生成共创的结果。</a>
+                </li>
+                <li><a class="text-black PF-sm">探索交互先行的AI应用研究模式：</a><a class="text-black/60">主要是打破“功能先行-界面后置”的传统研发范式，通过交互模式来反哺技术架构，并启发技术研究。</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Ending -->
+    <div class="mt-[96px] bg-white text-[24px] PF-sm">
+        <div class="flex justify-center p-[40px] text-[#808080]">
+            <p>🎉感谢您看到这里！</p>
+            <a href="gafalib.html" target="_blank" class="text-black hover:underline ">点此浏览下一个项目：GAFAlib。</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div>
+        <footer class="bg-white text-[20px]">
+            <div class="flex justify-between p-[40px] text-black/60">
+                <p>© 2025 Zack. All rights reserved.</p>
+                <a href="mailto:chengkezha@gmail.com"
+                    class="hover:underline hover:text-black transition-all duration-300 ease-in-out">
+                    chengkezha@gmail.com
+                </a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
