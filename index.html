@@ -2,21 +2,194 @@
 <html lang="cn" class="scroll-smooth font-sans">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>卖掉了~</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="font.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zack's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="font.css">
 </head>
 
 <body>
-<div class="h-[200px]"></div>
-<div class="flex justify-center">
-    <img src="media/404.png">
-</div>
+  <!-- Navbar -->
+  <div class="bg-[#F6FAFD]">
+    <nav class="flex justify-between w-full px-16 py-10 z-30 animate__animated animate__fadeInDown absolute">
+      <div class="flex justify-normal w-1/3 space-x-8">
+        <a href="#works"
+          class="flex justify-center w-[144px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>✏️
+            WORKS</button></a>
+        <a href="https://www.figma.com/proto/ide4uqnnv0sar0qPGG68Zv/Zack's-More-Works?page-id=0%3A1&node-id=1-1332&p=f&viewport=192%2C30%2C0.2&t=z0v4uU6qSHKAFnIs-1&scaling=min-zoom&content-scaling=fixed"
+          target="_blank"
+          class="flex justify-center w-[178px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>🖼
+            GALLERY</button></a>
+      </div>
+      <div class="flex justify-center w-1/3 h-auto">
+        <a href="#works" class="relative block h-[64px] w-[280px]">
+          <div class="h-full bg-cover bg-center transition-all duration-500 ease-in-out transform hover:scale-110">
+            <img src="media/homepage_island_start.png">
+          </div>
+        </a>
+      </div>
+      <div class="flex justify-end w-1/3">
+        <a href="about.html" target="_blank"
+          class="flex justify-center w-[178px] h-16 justify-normal text-xl rounded-full border border-black/20 text-black hover:bg-black hover:text-white hover:border-0 transition-all duration-300 ease-in-out"><button>👀
+            About Me</button></a>
+      </div>
+    </nav>
+  </div>
 
+  <!-- Hero Section -->
+  <div>
+    <div class="z-0 animate__animated animate__fadeIn ">
+      <video class="w-screen" autoplay loop muted playsinline style="mix-blend-mode: darken;">
+        <source src="https://zackzha-img.oss-cn-shenzhen.aliyuncs.com/homepage_bg.webm">
+      </video>
+    </div>
+
+    <div class="flex justify-center mt-[-176px] space-x-[72px] animate__animated animate__fadeInUp">
+      <a href="#works">
+        <button
+          class="z-30 flex items-center justify-center w-[340px] h-[96px] rounded-full border border-black/20 hover:bg-black hover:text-white hover:border-0 relative">
+          <p class="text-[32px] absolute left-[36px]">Explore More</p>
+          <img src="media/arrow_03.png"
+            class="absolute right-[36px] transition-opacity duration-300 group-hover:opacity-0">
+          <img src="media/arrow_04.png"
+            class="absolute right-[36px] hidden group-hover:block transition-opacity duration-300">
+        </button>
+      </a>
+      <a>
+        <button
+          class="cursor-not-allowed z-30 flex flex-row items-center w-[340px] h-[96px] rounded-full border bg-black transition-all duration-500 ease-in-out transform hover:scale-110">
+          <p class="px-16 text-[32px] text-white">My resume</p>
+          <img src="media/arrow_06.png"
+            class="absolute right-[36px] transition-opacity duration-300 group-hover:opacity-0">
+        </button>
+      </a>
+    </div>
+    <div class="h-[80px]">
+    </div>
+  </div>
+
+
+  <!-- Works Section -->
+  <div class="hidden-below-sm">
+    <section id="works" class="flex bg-[#F5FAFD]">
+      <!-- byme -->
+      <div class="w-1/2 h-auto">
+        <div
+          class="bg-[#F5FAFD] pt-[12px] pb-[6px] pl-[12px] pr-[6px] relative ease-in-out transform duration-300 transition-all">
+          <a href="byme.html" target="_blank">
+            <img class="w-full h-auto rounded-[48px] hover:brightness-110 ease-in-out duration-300"
+              src="https://zackzha-img.oss-cn-shenzhen.aliyuncs.com/cover_byme.png">
+          </a>
+          <div class="absolute top-[40px] left-[40px] text-[28px] flex justify-normal space-x-[8px]">
+            <img src="media/logo_byme.png">
+            <p class="PF-sm">Byme</p>
+          </div>
+        </div>
+      </div>
+      <!-- quin -->
+      <div class="w-1/2 h-auto cursor-not-allowed">
+        <div
+          class="bg-[#F5FAFD] pt-[12px] pb-[6px] pl-[6px] pr-[12px] relative ease-in-out transform duration-300 transition-all">
+          <a href="https://medium.com/@alstonchvita/因爲糟糕的用戶體驗-我重新設計了這款ai占卜產品-quin-cac9bf025dd4" target="_blank">
+            <img class="w-full h-auto rounded-[48px] hover:brightness-110 ease-in-out duration-300"
+              src="https://zackzha-img.oss-cn-shenzhen.aliyuncs.com/quin_cover.png">
+          </a>
+          <div class="absolute top-[40px] left-[40px] text-[28px] flex justify-normal space-x-[8px]">
+            <img src="https://zackzha-img.oss-cn-shenzhen.aliyuncs.com/quin_logo.png">
+            <p class="text-black PF-sm">Quin
+            <p class="text-black PF-r opacity-30"></p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex bg-[#F5FAFD]">
+      <!-- Midea -->
+      <div class="w-1/2 h-auto">
+        <div
+          class="bg-[#F5FAFD] pt-[6px] pb-[12px] pl-[12px] pr-[6px] relative ease-in-out transform duration-300 transition-all">
+          <a href="super.html" target="_blank">
+            <img class="w-full h-auto rounded-[48px] hover:brightness-125 ease-in-out duration-300"
+              src="https://zackzha-img.oss-cn-shenzhen.aliyuncs.com/cover_super.png">
+          </a>
+          <div class="absolute top-[40px] left-[40px] text-[28px] flex justify-normal space-x-[8px]">
+            <img src="media/logo_midea.png">
+            <p class="text-white PF-sm">美的 · SUPER UX Model</p>
+          </div>
+        </div>
+      </div>
+      <!-- Xmind -->
+      <div class="w-1/2 h-auto">
+        <div
+          class="bg-[#F5FAFD] pt-[6px] pb-[6px] pl-[6px] pr-[12px] relative ease-in-out transform duration-300 transition-all">
+          <a href="xmind.html" target="_blank">
+            <img class="w-full h-auto rounded-[48px] hover:brightness-110 ease-in-out duration-300"
+              src="https://zackzha-img.oss-cn-shenzhen.aliyuncs.com/cover_card_Xmind.png">
+          </a>
+          <div class="absolute top-[40px] left-[40px] text-[28px] flex justify-normal space-x-[8px]">
+            <img src="media/xmind/xmind_logo_44.png">
+            <p class="text-black PF-sm">Xmind·AI 概念设计</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex bg-[#F5FAFD]">
+      <!-- qume -->
+      <div class="w-1/2 h-auto">
+        <div
+          class="bg-[#F5FAFD] pt-[6px] pb-[6px] pr-[6px] pl-[12px] relative ease-in-out transform duration-300 transition-all">
+          <a href="qume.html" target="_blank">
+            <img class="w-full h-auto rounded-[48px] hover:brightness-125 ease-in-out duration-300"
+              src="https://zackzha-img.oss-cn-shenzhen.aliyuncs.com/cover_qume.png">
+          </a>
+          <div class="absolute top-[40px] left-[40px] text-[28px] flex justify-normal space-x-[8px]">
+            <img src="media/logo_qume.png">
+            <p class="text-white PF-sm">Qume</p>
+          </div>
+        </div>
+      </div>
+      <!-- gafalib -->
+      <div class="w-1/2 h-auto">
+        <div
+          class="bg-[#F5FAFD] pt-[6px] pb-[6px] pl-[6px] pr-[12px] relative ease-in-out transform duration-300 transition-all">
+          <a href="gafalib.html" target="_blank">
+            <img class="w-full h-auto rounded-[48px] hover:brightness-110 ease-in-out duration-300"
+              src="https://zackzha-img.oss-cn-shenzhen.aliyuncs.com/cover_gafalib.png">
+          </a>
+          <div class="absolute top-[40px] left-[40px] text-[28px] flex justify-normal space-x-[8px]">
+            <img src="media/logo_gafa.png">
+            <p class="text-black PF-sm">GAFALib</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- More -->
+  <div>
+    <section class="mt-[2px] h-[144px] bg-[#F5FAFD] border-t border-b border-black/10 flex justify-center items-center">
+      <button
+        class="cursor-not-allowed flex justify-center items-center rounded-full border border-black/20 w-[240px] h-[64px] hover:bg-black/10">
+        <p class="text-[20px]">🧐Coming Soon...</p>
+      </button>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <!-- web端Footer -->
+  <div class="hidden-below-sm">
+    <footer class="bg-[#F5FAFD] h-[108px] text-[20px]">
+      <div class="flex justify-between p-[40px] text-black/60">
+        <p>© 2025 Zack. All rights reserved.</p>
+        <a href="mailto:chengkezha@gmail.com"
+          class="hover:underline hover:text-black transition-all duration-300 ease-in-out">
+          chengkezha@gmail.com
+        </a>
+      </div>
+    </footer>
+  </div>
 
 </body>
 
