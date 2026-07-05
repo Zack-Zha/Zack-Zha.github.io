@@ -1,0 +1,73 @@
+name: Deploy portfolio to GitHub Pages
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [deploy-portfolio]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages-deploy
+  cancel-in-progress: true
+
+environment:
+  name: github-pages
+  url: ${{ steps.deployment.outputs.page_url }}
+
+jobs:
+  build:
+    name: Build Astro site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout portfolio source
+        uses: actions/checkout@v4
+        with:
+          repository: Zack-Zha/portfolio_root
+          ref: main
+          path: portfolio_root
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: portfolio_root/package-lock.json
+
+      - name: Install dependencies
+        working-directory: portfolio_root
+        run: npm ci
+
+      - name: Build
+        working-directory: portfolio_root
+        run: npm run build
+
+      - name: Ensure .nojekyll
+        run: touch portfolio_root/dist/.nojekyll
+
+      - name: Validate build output
+        run: |
+          test -f portfolio_root/dist/index.html || (echo "MISSING: index.html" && exit 1)
+          test -d portfolio_root/dist/_astro || (echo "MISSING: _astro/" && exit 1)
+          test -f portfolio_root/dist/.nojekyll || (echo "MISSING: .nojekyll" && exit 1)
+          echo "Build output OK"
+          find portfolio_root/dist -maxdepth 2 -type f | head -50
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: portfolio_root/dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Deploy artifact
+        id: deployment
+        uses: actions/deploy-pages@v5
